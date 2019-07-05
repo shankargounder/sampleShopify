@@ -1,0 +1,56 @@
+{% include 'page-header', title: {{page.title}} %}
+
+<div class="container">
+	<div class="row">
+		<div class="customer-form col-md-6 ">
+	    	{% form 'customer' %}
+		    	{% if form.posted_successfully? %}
+		    		<p class="note form-success">
+		    			Value Added Successfully!
+		    		</p>
+		    	{% endif %}
+		    	<div class="form-group">
+		          <input type="text" placeholder="Your Name" class="form-control" name="customer[first_name]" id="first_name">
+		        </div>
+		        
+		        <div class="form-group">
+		          <input type="text" placeholder="Your Name" class="form-control" name="customer[last_name]" id="last_name">
+		        </div>
+
+		        <div class="form-group">
+		          <input type="email" placeholder="Your Email" class="form-control" name="customer[email]" id="email">
+		        </div>
+		        
+		       
+
+		        <div>
+		          <input type="submit" id="customer-submit" class="btn btn-transparent" value="Submit">
+		        </div>
+	    	{% endform %}
+	    </div>
+	    <div class="contact-form col-md-6 ">
+	    	<table class="table table-bordered">
+	    		<thead>
+	    			<tr>
+	    				<th>S.No</th>
+	    				<th>NAME</th>
+	    				<th>EMAIL</th>
+	    				<th>MESSAGE</th>
+	    				<th>EDIT</th>
+	    				<th>DELETE</th>
+	    			</tr>
+	    		</thead>
+	    		<tbody>
+	    			<tr>
+	    				<td></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td></td>
+	    			</tr>
+	    		</tbody>
+	    	</table>
+	    </div>
+	</div>
+</div>
